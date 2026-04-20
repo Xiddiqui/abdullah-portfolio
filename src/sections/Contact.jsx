@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
@@ -23,17 +22,27 @@ const Contact = () => {
     setLoading(true); // Show loading state
 
     try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "6184f73b-6d32-4d5c-a797-97f036524064",
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const result = await response.json();
 
-      // Reset form and stop loading
-      setForm({ name: "", email: "", message: "" });
+      if (result.success) {
+        // Reset form and stop loading
+        setForm({ name: "", email: "", message: "" });
+      }
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      console.error("Web3Forms Error:", error); // Optional: show toast
     } finally {
       setLoading(false); // Always stop loading, even on error
     }

@@ -107,7 +107,7 @@ const Experience = () => {
                   <GlowCard card={card}>
                     <div className="flex flex-col gap-6 relative z-10">
                       <img src={card.imgPath} alt="exp-img" />
-                      {card.letterPath && (
+                      {card.expLetter === 'yes' && card.letterPath && (
                         <a
                           href={card.letterPath}
                           target="_blank"
