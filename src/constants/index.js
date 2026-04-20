@@ -12,8 +12,8 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Contact",
+    link: "#contact",
   },
 ];
 
@@ -207,7 +207,7 @@ const expCards = [
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     letterPath: "/ExperienceLetters/2.pdf",
-    expLetter: "yes",
+    expLetter: "no",
     title: "Senior Software Engineer - Envio by Vista",
     date: "01/2025 - 12/2025",
     responsibilities: [
@@ -230,20 +230,20 @@ const expCards = [
       "Developed the Graana Rider app from scratch, implementing Firebase notifications and building backend APIs in PHP Laravel.",
     ],
   },
-  {
-    review: "Collaborated with cross-functional teams to implement new features, improve code quality, and address user feedback, ensuring high levels of user satisfaction and retention.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    letterPath: "",
-    expLetter: "no",
-    title: "Front End developer - ByteTech Solutions",
-    date: "09/2020 - 03/2022",
-    responsibilities: [
-      "Contributed to the development of multiple front-end projects primarily using React Native, including fitness, food delivery, and social networking apps.",
-      "Integrated Firebase into several projects for real-time database, authentication, and cloud storage capabilities.",
-      "Implemented features such as user authentication, real-time messaging, push notifications, and data synchronization to provide seamless experiences.",
-    ],
-  },
+  // {
+  //   review: "Collaborated with cross-functional teams to implement new features, improve code quality, and address user feedback, ensuring high levels of user satisfaction and retention.",
+  //   imgPath: "/images/exp1.png",
+  //   logoPath: "/images/logo1.png",
+  //   letterPath: "",
+  //   expLetter: "no",
+  //   title: "Front End developer - ByteTech Solutions",
+  //   date: "09/2020 - 03/2022",
+  //   responsibilities: [
+  //     "Contributed to the development of multiple front-end projects primarily using React Native, including fitness, food delivery, and social networking apps.",
+  //     "Integrated Firebase into several projects for real-time database, authentication, and cloud storage capabilities.",
+  //     "Implemented features such as user authentication, real-time messaging, push notifications, and data synchronization to provide seamless experiences.",
+  //   ],
+  // },
 ];
 
 const expLogos = [
